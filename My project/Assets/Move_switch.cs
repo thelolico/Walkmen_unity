@@ -10,7 +10,8 @@ public class Move_switch : MonoBehaviour
     private Rigidbody myRigidbody;
     [SerializeField] float movespeed = 20f,movespeed_R = 30f,jumphigher = 100f,jumptime = 100f,maxjumptime = 100f;
     [SerializeField] int tp_x = 8,tp_y = 15,tp_z = -1500;
-    float pos,posx = 10f,posy = 3000f,posz = -1500f;
+    public float pos, posx = 10f, posy = 3000f, posz = -1500f;
+    public float new_z = -1500f;
     //float  h = 0f,v = 0f;
     //public Rigidbody  gr;
     // Start is called before the first frame update
@@ -39,7 +40,7 @@ public class Move_switch : MonoBehaviour
             isjump = 1;
             if(jumptime > 0) transform.Translate(0,jumphigher*Time.deltaTime,0);
         }
-        if(Input.GetKey(KeyCode.P) || pos <= -100f)
+        if(Input.GetKey(KeyCode.P) || pos <= -90f)
         {
             transform.position = new Vector3(tp_x,tp_y,tp_z);
             //leg2 (mySpawner, transform.position, Quaternion.identity);
@@ -64,6 +65,7 @@ public class Move_switch : MonoBehaviour
         else{
             GetComponent<MeshRenderer>().material.color = new Color(0,0,0,255);
         }
+        new_z = GetComponent<Transform>().position.z;
     }
 
     void RigidbodyMove(){

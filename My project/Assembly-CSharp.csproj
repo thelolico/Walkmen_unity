@@ -56,14 +56,16 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Legball\plan_1.cs" />
+    <Compile Include="Assets\Gameobject\leg\plan_1.cs" />
     <Compile Include="Assets\Move_Netons.cs" />
     <Compile Include="Assets\Move.cs" />
-    <Compile Include="Assets\Legball\leg.cs" />
+    <Compile Include="Assets\Gameobject\leg\leg.cs" />
     <Compile Include="Assets\aaa.cs" />
     <Compile Include="Assets\Textscene\Move_fortest.cs" />
+    <Compile Include="Assets\Gameobject\wall\wall_backword.cs" />
     <Compile Include="Assets\Camear_file\Camera1.cs" />
     <Compile Include="Assets\Camear_file\Camear.cs" />
+    <Compile Include="Assets\Gameobject\wall\wall_forword.cs" />
     <Compile Include="Assets\Move_Turn.cs" />
     <Compile Include="Assets\Move_switch.cs" />
   </ItemGroup>
